@@ -10,7 +10,9 @@
     "ios": {
       "icon": "./assets/expo.icon",
         "infoPlist": {
-    "NSLocationWhenInUseUsageDescription": "This app uses your location to record weather at your journal entries."
+    "NSLocationWhenInUseUsageDescription": "This app uses your location to record weather at your journal entries.",
+    "NSPhotoLibraryUsageDescription": "This app lets you attach a photo to your journal entries.",
+    "NSCameraUsageDescription": "This app lets you take a photo to attach to your journal entries."
   }
     },
     "android": {
