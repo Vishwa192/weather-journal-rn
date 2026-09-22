@@ -7,13 +7,14 @@ import HomeScreen from '@/screens/HomeScreen';
 import AddEntryScreen from '@/screens/AddEntryScreen';
 import DetailScreen from '@/screens/DetailScreen';
 import SettingsScreen from '@/screens/SettingsScreen';
+import { useEffect, useState } from 'react';
+import { initDatabase } from '@/db/databases';
 
 export type HomeStackParamList = {
   Home: undefined;
   AddEntry: undefined;
   Detail: {entryId: number};
 }
-
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,13 @@ function HomeStack() {
 }
 
 export default function App() {
+  const [dbReady, setDbReady] = useState(false);
+  
+useEffect(()=>{
+  initDatabase().then(() => setDbReady(true))
+},[])
+
+if(!dbReady) return null;
   return (
     <NavigationContainer>
       <Tab.Navigator>
