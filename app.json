@@ -8,7 +8,10 @@
     "scheme": "weatherjournalrn",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+        "infoPlist": {
+    "NSLocationWhenInUseUsageDescription": "This app uses your location to record weather at your journal entries."
+  }
     },
     "android": {
       "adaptiveIcon": {
