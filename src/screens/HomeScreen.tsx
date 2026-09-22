@@ -7,6 +7,7 @@ type HomeScreenNavProp = NativeStackNavigationProp<HomeStackParamList, 'Home'>
 
 export default function HomeScreen() {
     const navigation = useNavigation<HomeScreenNavProp>();
+
     return(
         <View style ={styles.container}>
             <Text>Home Screen</Text>
